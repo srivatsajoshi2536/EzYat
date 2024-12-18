@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <header class="bg-gray-800 text-yellow-400 py-4 shadow-lg sticky top-0 flex items-center justify-center space-x-4">
+    <!-- Logo Image -->
+    <img src="logo.png" alt="Logo" class="w-10 h-10">
+    <div>
+      <h1 class="text-2xl font-bold" id="greeting">Attendance Tracker</h1>
+      <p class="text-sm text-gray-300" id="subtext">Track your attendance below</p>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-6 space-y-6">
+    <button id="add-subject-btn" class="w-full py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-lg shadow-md transition duration-300">
+      Add Subject
+    </button>
+    <section id="total-attendance" class="bg-gray-800 rounded-lg p-4 shadow-md hidden">
+      <h2 class="text-xl font-bold text-yellow-400">Total Attendance</h2>
+      <p class="text-gray-300 mt-2">
+        <span id="overall-present" class="font-bold">0</span> classes attended out of 
+        <span id="overall-total" class="font-bold">0</span> total classes.
+      </p>
+      <p class="text-yellow-400 text-lg font-bold mt-2">
+        Attendance Percentage: <span id="overall-percentage">0%</span>
+      </p>
+    </section>
+    <!-- Button to Download PDF -->
+    <button id="download-pdf-btn" class="w-full py-3 bg-blue-500 hover:bg-blue-400 text-black font-bold rounded-lg shadow-md transition duration-300">
+      Download Attendance as PDF
+    </button>
+    <!-- Subjects will be dynamically rendered here -->
+  </main>
+  <footer class="bg-gray-800 text-center py-4 text-yellow-400">
+    &copy; 2024 EzYaT - By Joshi & Richard
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
